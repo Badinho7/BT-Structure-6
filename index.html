@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BT-Structure VR Tour</title>
+
+  <!-- A-Frame -->
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Lógica -->
+  <script src="scene.js"></script>
+</head>
+<body>
+
+  <!-- Pantalla de inicio -->
+  <div id="start-screen">
+    <h1>BT-Structure VR Tour</h1>
+    <button id="start-button">Iniciar tour</button>
+  </div>
+
+  <!-- ESCENA VR -->
+  <a-scene embedded vr-mode-ui="enabled: true">
+
+    <!-- Cámara -->
+    <a-entity id="camera" camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+    <!-- Fondo 360º -->
+    <a-sky id="sky" color="#000000"></a-sky>
+
+    <!-- Audio narración -->
+    <a-entity id="narration" sound="src: url(narration.ogg); autoplay: false;"></a-entity>
+
+  </a-scene>
+
+</body>
+</html>
